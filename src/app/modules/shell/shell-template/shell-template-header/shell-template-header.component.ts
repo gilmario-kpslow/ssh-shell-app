@@ -7,6 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShellTemplateHeaderComponent implements OnInit {
 
+  items = [
+    {
+      label: 'Update',
+      icon: 'pi pi-refresh'
+  },
+  {
+      label: 'Delete',
+      icon: 'pi pi-times'
+  },
+  {
+      label: 'Angular',
+      icon: 'pi pi-external-link',
+      url: 'http://angular.io'
+  },
+  {
+      label: 'Router',
+      icon: 'pi pi-upload',
+      routerLink: '/fileupload'
+  }
+  ];
   constructor() { }
 
   ngOnInit(): void {

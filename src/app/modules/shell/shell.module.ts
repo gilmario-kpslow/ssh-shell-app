@@ -6,6 +6,10 @@ import { ShellTemplateComponent } from './shell-template/shell-template.componen
 import { WhiteboardComponent } from './whiteboard/whiteboard.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { ShellTemplateHeaderComponent } from './shell-template/shell-template-header/shell-template-header.component';
+import {ToolbarModule} from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { SplitButtonModule } from 'primeng/splitbutton';
+
 
 
 @NgModule({
@@ -17,7 +21,10 @@ import { ShellTemplateHeaderComponent } from './shell-template/shell-template-he
   ],
   imports: [
     CommonModule,
-    ShellRoutingModule
+    ShellRoutingModule,
+    ToolbarModule,
+    ButtonModule,
+    SplitButtonModule
   ]
 })
 export class ShellModule { }
