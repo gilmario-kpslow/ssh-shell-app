@@ -6,6 +6,7 @@ import { ShellTemplateComponent } from './shell-template/shell-template.componen
 import { WhiteboardComponent } from './whiteboard/whiteboard.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { ShellTemplateHeaderComponent } from './shell-template/shell-template-header/shell-template-header.component';
+import { TerminalService } from './terminal.service';
 
 
 @NgModule({
@@ -18,6 +19,9 @@ import { ShellTemplateHeaderComponent } from './shell-template/shell-template-he
   imports: [
     CommonModule,
     ShellRoutingModule
+  ],
+  providers: [
+    TerminalService
   ]
 })
 export class ShellModule { }

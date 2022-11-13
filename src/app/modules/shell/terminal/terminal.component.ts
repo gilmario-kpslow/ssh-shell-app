@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Quadrado } from './quadrado';
+import { TerminalService } from '../terminal.service';
 
 @Component({
   selector: 'app-terminal',
@@ -14,11 +15,11 @@ export class TerminalComponent implements OnInit {
 
   @ViewChild('canvas', { static: true }) canvas: ElementRef<HTMLCanvasElement>| undefined;
 
-  constructor() { }
+  constructor(private service: TerminalService) { }
 
   ngOnInit(): void {
-    this.context = this.canvas?.nativeElement.getContext('2d');
-    this.animate();
+    // this.context = this.canvas?.nativeElement.getContext('2d');
+    // this.animate();
   }
 
   animate(): void {
@@ -31,6 +32,14 @@ export class TerminalComponent implements OnInit {
 
     const square = new Quadrado(this.context);
     square.draw(5, 1, 20);
+  }
+
+  conect() {
+    this.service.iniciar();
+  }
+
+  messagem() {
+    this.service.enviar('HI')
   }
 
 }
