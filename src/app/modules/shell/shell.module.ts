@@ -7,6 +7,10 @@ import { WhiteboardComponent } from './whiteboard/whiteboard.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { ShellTemplateHeaderComponent } from './shell-template/shell-template-header/shell-template-header.component';
 import { TerminalService } from './terminal.service';
+import {ToolbarModule} from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { SplitButtonModule } from 'primeng/splitbutton';
+
 
 
 @NgModule({
@@ -19,6 +23,9 @@ import { TerminalService } from './terminal.service';
   imports: [
     CommonModule,
     ShellRoutingModule
+    ToolbarModule,
+    ButtonModule,
+    SplitButtonModule
   ],
   providers: [
     TerminalService
